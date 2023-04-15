@@ -17,25 +17,25 @@ tests:
     - build
     - test
 
-build-stag:
-  stage: build
-  script:
-    - TAG=stag FRONTEND_ENV=staging sh ./scripts/build-push.sh
-  only:
-    - master
-  tags:
-    - build
-    - test
+# build-stag:
+#   stage: build
+#   script:
+#     - TAG=stag FRONTEND_ENV=staging sh ./scripts/build-push.sh
+#   only:
+#     - master
+#   tags:
+#     - build
+#     - test
     
-build-prod:
-  stage: build
-  script:
-    - TAG=prod FRONTEND_ENV=production sh ./scripts/build-push.sh
-  only:
-    - production
-  tags:
-    - build
-    - test
+# build-prod:
+#   stage: build
+#   script:
+#     - TAG=prod FRONTEND_ENV=production sh ./scripts/build-push.sh
+#   only:
+#     - production
+#   tags:
+#     - build
+#     - test
 
 deploy-stag:
   stage: deploy
