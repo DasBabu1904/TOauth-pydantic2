@@ -23,3 +23,6 @@ RUN bash -c "if [ $INSTALL_JUPYTER == 'true' ] ; then pip install jupyterlab ; f
 
 COPY ./app /app
 ENV PYTHONPATH=/app
+
+RUN python3.7 -m pip install importlib-metadata==4.13.0
+RUN python3.7 -m pip install httpcore==0.15
