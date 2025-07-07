@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.11
 
 WORKDIR /app/
 
@@ -36,6 +36,6 @@ COPY ./app/worker-start.sh /worker-start.sh
 
 RUN chmod +x /worker-start.sh
 
-RUN python3.7 -m pip install importlib-metadata==4.13.0
+RUN python3.11 -m pip install importlib-metadata==4.13.0
 
 CMD ["bash", "/worker-start.sh"]
